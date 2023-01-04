@@ -7,8 +7,18 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h3 data-testid="counter">{counter}</h3>
-        <button data-testid="minus-button">-</button>
-        <button data-testid="plus-button">+</button>
+        <button
+          data-testid="minus-button"
+          onClick={() => setCounter((prev) => prev - 1)}
+        >
+          -
+        </button>
+        <button
+          data-testid="plus-button"
+          onClick={() => setCounter((prev) => prev + 1)}
+        >
+          +
+        </button>
       </header>
     </div>
   );
